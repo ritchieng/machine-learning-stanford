@@ -13,9 +13,9 @@
     - Real AI
 
 ## 1. [Supervised Learning](supervised.png)
-![alt text](supervised.png)
 - Gave data set answers
 - Regression: predict continuous valued output
+![alt text](supervised.png)
 
 ### 1a. Classification
 - Discrete valued output (0 or 1)
@@ -36,12 +36,12 @@ if it has been hacked/compromised.
     1: hacked
 
 ## 2. [Unsupervised Learning](unsupervised.png) 
-![alt text](unsupervised.png)
 - Making sense of data; patterns we don't know in advance
 - Examples
     - Social network analysis
     - Market segmentation
     - Astronomical data analysis
+![alt text](unsupervised.png)
 
 ### 2a. Cocktail Party Problem
 - Give 2 audio recording
@@ -58,7 +58,7 @@ if it has been hacked/compromised.
 
 ## 3. Model and Cost Function
 
-### Model Representation
+### 3a. Model Representation
 - Supervised learning: given the right answer for each example in the data
 - Regression: predict real-valued output
 - Classification: predict discrete-valued output
@@ -68,6 +68,45 @@ if it has been hacked/compromised.
     - y = output variable/target
     - (x, y) = one training example
     - (x^(i), y^(i)) = i-th training example
+- Representing hypothesis h
+    - linear regression with one variable (univariate linear regression)
+        - h(x) = a + bx 
+            - a,b: parameters
+![alt text](hypothesis.png)
+
+### 3b. Cost Function
+- Minimise squared error function
+![alt text](minimisation.png)
+
+### 3c. h(x) and J(theta): 1 Parameter
+- Assuming simplified cost function with only theta1
+- Minimising J(theta) would fit the data most well 
+![alt text](rationale_minimisation.png)
+
+### 3d. h(x) and J(theta0, theta1): 2 Parameters
+- 3D graph
+![alt text](2_params.png)
+
+- Contour graphs 
+    - Minimum is in the smallest concentric circle
+![alt text](contour.png)
+
+## 4. Parameter Learning
+
+### 4a. Gradient Descent 
+- Concept
+![alt text](gradient_minimisation.png)
+![alt text](gradient_descent.png)
+
+- Gradient Descent Algorithm
+    - a:= b (this means assignment)
+    - a = b (truth assertion)
+    - alpha (number, learning rate)
+        - large: aggressive gradient descent
+    - derivative
+    ![alt text](gradient_descent_algorithm.png)
+
+
 
 
 
