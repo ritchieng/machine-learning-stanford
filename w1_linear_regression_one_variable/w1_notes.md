@@ -12,7 +12,7 @@
     - Brain
     - Real AI
 
-## 1. [Supervised Learning](supervised.png)
+## 1. Supervised Learning
 - Gave data set answers
 - Regression: predict continuous valued output
 ![alt text](supervised.png)
@@ -35,7 +35,7 @@ if it has been hacked/compromised.
     0: not hacked
     1: hacked
 
-## 2. [Unsupervised Learning](unsupervised.png) 
+## 2. Unsupervised Learning 
 - Making sense of data; patterns we don't know in advance
 - Examples
     - Social network analysis
