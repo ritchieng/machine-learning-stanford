@@ -99,12 +99,45 @@ if it has been hacked/compromised.
 ![alt text](gradient_descent.png)
 
 - Gradient Descent Algorithm
+    - repeat until convergence
     - a:= b (this means assignment)
     - a = b (truth assertion)
     - alpha (number, learning rate)
         - large: aggressive gradient descent
-    - derivative
+    - derivative: slope of J(theta)
     ![alt text](gradient_descent_algorithm.png)
+
+### 4b. Gradient Descent Intuition
+
+- Derivative intuition
+![alt text](derivative.png)
+
+- Alpha intuition
+![alt text](alpha.png)
+    - If already at local optima --> derivative = 0
+        - Theta will not change! 
+    - Steps will be smaller even with alpha fixed
+        - This is because derivative decreases (slope decreases) nearing local minimum
+
+
+### 4c. Gradient Descent for Linear Regression
+- Apply gradient descent algorithm to linear regression
+- _For derivative: d (single parameter), delta (multiple derivative, partial differentiation)_
+- Plug J(theta_0, theta_1) into Gradient Descent's derivative
+![alt text](gradient_descent_linear_regression.png)
+![alt text](algorithm2.png)
+
+
+- Cost function for linear regression will always be convex function
+    - One global minimum
+![alt text](2_params.png)
+    - Gradient descent for linear regression
+        - Keep changing parameters to reach global minimum
+        - This is called "Batch Gradient Descent"
+        - Each step uses all the training examples (batch)
+![alt text](contour.png)
+
+
 
 
 
