@@ -71,5 +71,6 @@
 ![alt text](inverse.png)
 
 ### 6b. Transpose
+- Example and theory
 ![alt text](transpose.png)
 
