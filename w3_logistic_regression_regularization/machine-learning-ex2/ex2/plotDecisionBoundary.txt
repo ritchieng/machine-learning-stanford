@@ -1,0 +1,21 @@
+This post derives how the plotDecisionBoundary() function works.
+
+For logistic regression, h = sigmoid(X * theta). This describes the relationship between X, theta, and h.
+
+We know theta (from gradient descent).
+
+We know h - by definition, the decision boundary is the locus of points where h = 0.5, or equivalently (X * theta) = 0, since the sigmoid(0) is 0.5.
+
+Now we can write out the equation for the case where we have two features and a bias unit, and we write X as [x0x1x2] and theta as [θ0θ1θ2]
+
+0=x0θ0+x1θ1+x2θ2
+x0 is the bias unit, it is hard-coded to 1.
+
+0=θ0+x1θ1+x2θ2
+Solve for x2
+x2=−(θ0+x1θ1)/θ2
+Now, to draw a line, you need two points. So pick two values for x1 - anything near the minimum and maximum of the training set will serve. Compute the corresponding values for x2, and plot the (x1x2) pairs on the horizontal and vertical axes, then draw a line through them.
+
+This line represents the decision boundary.
+
+This is exactly what the plotDecisionBoundary() function does. x2 is the variable "plot_y", and x1 is the variable "plot_x".
