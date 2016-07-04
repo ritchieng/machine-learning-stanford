@@ -84,7 +84,7 @@
     - s1 (layer 1 units) = 10
     - s2 (layer 2 units) = 10
     - s3 (layer 3 units) = 1
-    - Ɵ1(:) unrolls into a vector
+    - Theta1(:) unrolls into a vector
     - You can go back with reshape by pulling up each bunch of elements and reshape accordingly
         - thetaVec(1:110) pulls up Ɵ1, the first 10 x 11 elements
         ![](unrollparam2.png)
