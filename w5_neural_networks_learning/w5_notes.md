@@ -63,6 +63,7 @@
     - Dimensions 
     ![](bp.png)
 - Backpropagation Algorithm
+    - Δ is to accumulate the partial derivative terms
 ![](backpropagation3.png)
 
 ## 1d. Backpropagation Intuition
