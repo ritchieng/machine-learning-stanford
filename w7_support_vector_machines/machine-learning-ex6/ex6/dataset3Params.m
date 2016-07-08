@@ -23,11 +23,31 @@ sigma = 0.3;
 %        mean(double(predictions ~= yval))
 %
 
+% Return C, sigma
+
+% Given X, y, Xval, yval
+% Xval and yval are from the cross validation set
+
+results = [];
+
+for C_test = [0.01 0.03 0.1 0.3 1, 3, 10 30]
+  for sigma_test = [0.01 0.03 0.1 0.3 1, 3, 10 30]
+
+    model = svmTrain(X, y, C_test, @(x1, x2) gaussianKernel(x1, x2, sigma_test));
+
+    predictions = svmPredict(model, Xval);
+    prediction_error = mean(double(predictions ~= yval));
+
+    results = [results; C_test, sigma_test, prediction_error];
+
+  end
+end
 
 
+[minError, minIndex] = min(results(:,3));
 
-
-
+C = results(minIndex,1);
+sigma = results(minIndex,2);
 
 % =========================================================================
 

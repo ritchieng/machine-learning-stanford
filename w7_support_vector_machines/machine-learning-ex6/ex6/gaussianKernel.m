@@ -17,7 +17,10 @@ sim = 0;
 %
 
 
+% Return sim
+% Given x1, x2, sigma
 
+sim = exp(-(sum((x1 - x2) .^ 2)) / (2 * (sigma^2)))
 
 
 

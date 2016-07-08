@@ -164,6 +164,7 @@
     ![](svm20.png)
         - We have to do feature scaling before using Gaussian kernel
             - This is because if we don't, || x - l ||^2 would be dominated mainly by the features that are large in scale such as the 1000sqft feature
+        - The Gaussian kernel is also parameterized by a bandwidth pa- rameter, σ, which determines how fast the similarity metric decreases (to 0) as the examples are further apart
 - Other choices of kernel
 ![](svm21.png)
 - Multi-class classification
