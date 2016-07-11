@@ -25,6 +25,7 @@
 ![](unsupervisedlearning19.png)
 
 ## 2. Principal Component Analysis (PCA)
+
 ### 2a. Principal Component Analysis Problem Formation
 - Let's say we have the following 2D data
 ![](unsupervisedlearning20.png)
@@ -62,6 +63,7 @@
 ![](unsupervisedlearning27.png)
 
 ## 3. Applying PCA
+
 ### 3a. Reconstruction from Compressed Representation
 - We can go from lower dimensionality to higher dimensionality
 ![](unsupervisedlearning28.png)
