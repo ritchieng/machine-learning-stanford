@@ -25,14 +25,20 @@ for epsilon = min(pval):stepsize:max(pval)
 
 
 
+% find bestEpsilon, bestF1
+% given yval, pval
 
 
+predictions = (pval < epsilon);
 
+tp = sum((predictions == 1) & (yval == 1));
+fp = sum((predictions == 1) & (yval == 0));
+fn = sum((predictions == 0) & (yval == 1));
 
+prec = tp / (tp + fp);
+rec = tp / (tp + fn);
 
-
-
-
+F1 = (2 * prec * rec) / (prec + rec);
 
 
     % =============================================================

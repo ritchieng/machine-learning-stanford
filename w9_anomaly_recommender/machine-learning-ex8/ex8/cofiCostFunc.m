@@ -43,12 +43,22 @@ Theta_grad = zeros(size(Theta));
 
 
 
+% find J, grad
+% given params, Y, R, num_users, num_movies, num_features, lambda
 
 
 
+% 1. Cost function
+squared_errors = (X * Theta' - Y) .^ 2;
+% This would ensure that we sum only when R == 1
+select_squared_errors = squared_errors .* R;
+J = (1 / 2) * sum(sum(select_squared_errors)) + (lambda / 2) * sum(sum(Theta .^ 2)) + (lambda / 2) * sum(sum(X .^ 2))
 
+% 2. Gradient of cost function
 
-
+select_errors  = (X * Theta' - Y) .* R;
+X_grad = select_errors * Theta + lambda * X;
+Theta_grad = select_errors' * X + lambda * Theta;
 
 
 
